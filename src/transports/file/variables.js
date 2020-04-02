@@ -58,23 +58,27 @@ function getLibraryTemplate(platform) {
 }
 
 function getNameAndVersion() {
-  var name = electronApi.getName();
-  var version = electronApi.getVersion();
+  return {
+    name: "mathcha-notebook-service",
+    version: "1.0.0"
+  };
+  // var name = electronApi.getName();
+  // var version = electronApi.getVersion();
 
-  if (name && version) {
-    return { name: name, version: version };
-  }
+  // if (name && version) {
+  //   return { name: name, version: version };
+  // }
 
-  var packageValues = packageJson.readPackageJson();
-  if (!name) {
-    name = packageValues.name;
-  }
+  // var packageValues = packageJson.readPackageJson();
+  // if (!name) {
+  //   name = packageValues.name;
+  // }
 
-  if (!version) {
-    version = packageValues.version;
-  }
+  // if (!version) {
+  //   version = packageValues.version;
+  // }
 
-  return { name: name, version: version };
+  // return { name: name, version: version };
 }
 
 /**
